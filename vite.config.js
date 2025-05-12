@@ -8,4 +8,15 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        target: 'esnext',
+        outDir: 'public/build',
+        assetsDir: '',
+        manifest: true,
+        rollupOptions: {
+            output: {
+                manualChunks: undefined
+            }
+        }
+    }
 });
